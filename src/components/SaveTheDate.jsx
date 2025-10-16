@@ -16,7 +16,7 @@ export default function SaveTheDate() {
 
     return (
         <section className="w-350 flex-column gap-6">
-            <div className="flex-column gap-10">
+            <div className="flex-column text-center gap-10">
                 <p className="fs-15 playfair color-primary">Save The Date</p>
                 <p className="text-capitalize playfair color-primary fs-10">
                     {`${weddingDate.toLocaleDateString('vi-VN', { month: 'long' })}/${weddingDate.getFullYear()}`}

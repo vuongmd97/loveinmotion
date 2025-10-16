@@ -20,7 +20,7 @@ export default function EnvelopeIntro({ onOpen }) {
                     />
                 </div>
             </div>
-            <div className="flex-column gap-10">
+            <div className="flex-column text-center gap-10">
                 <p className="fs-11">THIỆP</p>
                 <p className="fs-25 great-vibes">Mời Cưới</p>
             </div>
