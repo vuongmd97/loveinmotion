@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import EnvelopeIntro from './components/EnvelopeIntro';
-import './App.css';
 import InvitationContent from './components/InvitationContent';
 
 function App() {
