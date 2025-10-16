@@ -1,0 +1,25 @@
+@for $i from 0 through 30 {
+    .fs-#{$i} {
+        font-size: (2px * $i) !important;
+    }
+}
+
+.great-vibes {
+    font-family: 'Great Vibes', cursive;
+}
+
+.playfair {
+    font-family: 'Playfair Display', serif;
+}
+
+.fw-bold {
+    font-weight: bold;
+}
+
+.text-capitalize {
+    text-transform: capitalize;
+}
+
+.text-uppercase {
+    text-transform: uppercase;
+}

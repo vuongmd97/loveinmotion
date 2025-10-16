@@ -1,0 +1,161 @@
+@use './variables.scss' as *;
+
+.img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+
+    &.w-170 {
+        width: 170px;
+        height: 170px;
+    }
+
+    &.w-110 {
+        width: 110px;
+        height: 110px;
+    }
+}
+
+.opacity {
+    &-3 {
+        opacity: 0.3;
+    }
+
+    &-5 {
+        opacity: 0.5;
+    }
+}
+
+.daypicker {
+    display: flex;
+    justify-content: center;
+
+    .rdp-month_caption {
+        height: 0;
+    }
+
+    .rdp-month_grid {
+        thead {
+            font-size: 14px;
+        }
+    }
+
+    .rdp {
+        border-collapse: collapse;
+    }
+
+    .rdp-months {
+        border: 2px solid $color-secondary;
+    }
+
+    .rdp-weekdays {
+        border-bottom: 2px solid $color-secondary;
+
+        .rdp-weekday {
+            opacity: 1;
+            line-height: 24px;
+            background-color: $color-primary;
+            color: white;
+            font-weight: bold;
+        }
+    }
+
+    .rdp-weeks {
+        color: $color-primary;
+        .rdp-day {
+            width: 50px;
+        }
+        .rdp-day_button {
+            width: 48px;
+        }
+    }
+
+    .wedding-selected {
+        position: relative;
+        color: white;
+        font-weight: bold;
+
+        &::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1792 1896.0833" fill="rgba(25, 56, 41, 1)"><path d="M896 1664q-26 0-44-18l-624-602q-10-8-27.5-26T145 952.5 77 855 23.5 734 0 596q0-220 127-344t351-124q62 0 126.5 21.5t120 58T820 276t76 68q36-36 76-68t95.5-68.5 120-58T1314 128q224 0 351 124t127 344q0 221-229 450l-623 600q-18 18-44 18z"/></svg>') !important;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 32px;
+            z-index: -1;
+            animation: pulse 1s ease-in-out 2s infinite;
+        }
+    }
+}
+
+.animation-pulse {
+    animation: pulse 3.5s ease-in-out 1s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.wedding {
+    width: 100vw;
+    height: 100vh;
+    max-width: 430px;
+    margin: 0 auto;
+    padding-top: 16px;
+    overflow: hidden;
+    position: relative;
+
+    &-intro {
+        .header {
+            .top-left {
+                top: -20px;
+                left: -94px;
+            }
+
+            .wrap {
+                .img-1 {
+                    right: -68px;
+                    top: 06px;
+                    transform: rotate(2deg);
+                }
+                .img-2 {
+                    right: -70px;
+                    top: 46px;
+                    transform: rotate(334deg);
+                }
+            }
+        }
+
+        .img {
+            &-xs {
+                width: 90px;
+                height: 90px;
+            }
+            &-lg {
+                width: 80%;
+            }
+        }
+    }
+
+    .countdown {
+        height: 85px;
+    }
+}
+
+.w-350 {
+    width: 350px;
+    margin: 0 auto;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
