@@ -1,7 +1,6 @@
 import { DayPicker } from 'react-day-picker';
 import { vi } from 'date-fns/locale';
 import 'react-day-picker/style.css';
-import { HeartGreen } from '../assets/svg/HeartGreen';
 
 export default function SaveTheDate() {
     const weddingDate = new Date(2025, 11, 13);
@@ -15,7 +14,7 @@ export default function SaveTheDate() {
     };
 
     return (
-        <section className="w-350 flex-column gap-6">
+        <section className="flex-column gap-6">
             <div className="flex-column text-center gap-10">
                 <p className="fs-15 playfair color-primary">Save The Date</p>
                 <p className="text-capitalize playfair color-primary fs-10">

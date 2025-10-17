@@ -63,10 +63,12 @@
     .rdp-weeks {
         color: $color-primary;
         .rdp-day {
-            width: 50px;
+            width: 60px;
+            height: 38px;
         }
         .rdp-day_button {
-            width: 48px;
+            width: 100%;
+            height: 100%;
         }
     }
 
@@ -110,7 +112,7 @@
     height: 100vh;
     max-width: 430px;
     margin: 0 auto;
-    padding-top: 16px;
+    padding: 16px;
     overflow: hidden;
     position: relative;
 
@@ -146,8 +148,27 @@
         }
     }
 
-    .countdown {
-        height: 85px;
+    .wedding-countdown {
+        .countdown {
+            height: 85px;
+        }
+
+        .wrap-countdown {
+            margin-top: 20px;
+        }
+
+        .tick {
+            font-size: 22px;
+            line-height: 40px;
+        }
+        .tick-flip {
+            width: 38px;
+        }
+
+        .tick-flip-panel {
+            background-color: $color-primary;
+            color: white;
+        }
     }
 }
 
@@ -158,4 +179,12 @@
 
 .cursor-pointer {
     cursor: pointer;
+}
+
+.tick [data-credit],
+.tick-credit,
+.tick-credits {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
 }

@@ -9,7 +9,7 @@ function App() {
         setIsOpen(true);
     };
 
-    return <div className="wedding">{!isOpen ? <EnvelopeIntro onOpen={openEnvelope} /> : <InvitationContent />}</div>;
+    return <div className="wedding">{isOpen ? <EnvelopeIntro onOpen={openEnvelope} /> : <InvitationContent />}</div>;
 }
 
 export default App;
