@@ -113,8 +113,12 @@
     max-width: 430px;
     margin: 0 auto;
     padding: 16px;
-    overflow: hidden;
     position: relative;
+    overflow-y: auto;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
 
     &-intro {
         .header {
@@ -187,4 +191,9 @@
     display: none !important;
     visibility: hidden !important;
     opacity: 0 !important;
+}
+
+.scrolls {
+    height: 100%;
+    overflow-y: auto;
 }

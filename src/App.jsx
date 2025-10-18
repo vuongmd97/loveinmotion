@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import EnvelopeIntro from './components/EnvelopeIntro';
 import InvitationContent from './components/InvitationContent';
+import Envelope from './components/Envelope';
 
 function App() {
     const [isOpen, setIsOpen] = useState(false);
@@ -9,7 +10,13 @@ function App() {
         setIsOpen(true);
     };
 
-    return <div className="wedding">{isOpen ? <EnvelopeIntro onOpen={openEnvelope} /> : <InvitationContent />}</div>;
+    return (
+        <div className="wedding">
+            <EnvelopeIntro onOpen={openEnvelope} isOpen={isOpen} />
+            {isOpen && <InvitationContent />}
+            {/* <Envelope /> */}
+        </div>
+    );
 }
 
 export default App;

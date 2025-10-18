@@ -1,4 +1,6 @@
-export default function EnvelopeIntro({ onOpen }) {
+import Envelope from './Envelope';
+
+export default function EnvelopeIntro({ onOpen, isOpen }) {
     return (
         <section className="wedding-intro flex-column align-center gap-20">
             <div className="header">
@@ -29,13 +31,7 @@ export default function EnvelopeIntro({ onOpen }) {
                 src="https://vodcftljfczkktzzpgxv.supabase.co/storage/v1/object/public/wedding-assets/image-4.png"
                 alt="song-hy"
             />
-            <img
-                className="img-lg animation-pulse cursor-pointer"
-                src="https://vodcftljfczkktzzpgxv.supabase.co/storage/v1/object/public/wedding-assets/envelope-close.png"
-                alt="evenlope"
-                onClick={onOpen}
-            />
-            <p className="fs-9">- NHẤP VÀO THIỆP ĐỂ MỞ -</p>
+            <Envelope onOpen={onOpen} isOpen={isOpen} />
         </section>
     );
 }
