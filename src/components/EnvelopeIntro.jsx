@@ -1,4 +1,4 @@
-import Envelope from './Envelope';
+import '../assets/css/envelope.scss';
 
 export default function EnvelopeIntro({ onOpen, isOpen }) {
     return (
@@ -31,7 +31,22 @@ export default function EnvelopeIntro({ onOpen, isOpen }) {
                 src="https://vodcftljfczkktzzpgxv.supabase.co/storage/v1/object/public/wedding-assets/image-4.png"
                 alt="song-hy"
             />
-            <Envelope onOpen={onOpen} isOpen={isOpen} />
+            <section className="cssletter">
+                <div className={`envelope ${isOpen ? 'active' : 'animation-pulse'}`}>
+                    <button className="heart" aria-label="Open Envelope">
+                        <span className="heart-text" onClick={onOpen}>
+                            Mở
+                        </span>
+                    </button>
+                    <div className="envelope-flap"></div>
+                    <div className="envelope-folds">
+                        <div className="envelope-left"></div>
+                        <div className="envelope-right"></div>
+                        <div className="envelope-bottom"></div>
+                    </div>
+                </div>
+                <div className="letters"></div>
+            </section>
         </section>
     );
 }

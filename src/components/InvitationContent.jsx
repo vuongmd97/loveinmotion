@@ -1,3 +1,4 @@
+import FamilyInfo from './FamilyInfo';
 import SaveTheDate from './SaveTheDate';
 import WeddingCountDown from './WeddingCountDown';
 
@@ -46,6 +47,7 @@ export default function InvitationContent() {
                 </div>
             </section>
 
+            <FamilyInfo />
             <SaveTheDate />
             <WeddingCountDown />
         </div>
