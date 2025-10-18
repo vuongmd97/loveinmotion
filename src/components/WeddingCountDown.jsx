@@ -70,7 +70,7 @@ export default function WeddingCountDown() {
     return (
         <section className="text-right wedding-countdown">
             <img
-                className="img countdown"
+                className="countdown"
                 src="https://vodcftljfczkktzzpgxv.supabase.co/storage/v1/object/public/wedding-assets/image-6.png"
                 alt="countdown"
             />

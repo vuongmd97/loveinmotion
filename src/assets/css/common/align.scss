@@ -93,3 +93,9 @@
         gap: (2px * $i) !important;
     }
 }
+
+@for $i from 0 through 10 {
+    .mt-#{$i} {
+        margin-top: (5px * $i) !important;
+    }
+}

@@ -22,9 +22,9 @@ export default function EnvelopeIntro({ onOpen, isOpen }) {
                     />
                 </div>
             </div>
-            <div className="flex-column text-center gap-10">
+            <div className="text-center">
                 <p className="fs-11">THIỆP</p>
-                <p className="fs-25 great-vibes">Mời Cưới</p>
+                <p className="fs-25 header-label">Mời Cưới</p>
             </div>
             <img
                 className="img-xs"
@@ -44,8 +44,8 @@ export default function EnvelopeIntro({ onOpen, isOpen }) {
                         <div className="envelope-right"></div>
                         <div className="envelope-bottom"></div>
                     </div>
+                    <div className="letters"></div>
                 </div>
-                <div className="letters"></div>
             </section>
         </section>
     );
