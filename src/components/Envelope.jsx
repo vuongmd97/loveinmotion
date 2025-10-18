@@ -5,7 +5,7 @@ export default function Envelope({ onOpen, isOpen }) {
     return (
         <>
             <section className="cssletter">
-                <div className={`envelope ${isOpen ? 'active' : 'animation-pulse2'}`}>
+                <div className={`envelope ${isOpen ? 'active' : 'animation-pulse'}`}>
                     <button className="heart" aria-label="Open Envelope">
                         <span className="heart-text" onClick={onOpen}>
                             Mở

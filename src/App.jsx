@@ -14,7 +14,6 @@ function App() {
         <div className="wedding">
             <EnvelopeIntro onOpen={openEnvelope} isOpen={isOpen} />
             {isOpen && <InvitationContent />}
-            {/* <Envelope /> */}
         </div>
     );
 }
