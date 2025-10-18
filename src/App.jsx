@@ -12,8 +12,10 @@ function App() {
 
     return (
         <div className="wedding">
-            <EnvelopeIntro onOpen={openEnvelope} isOpen={isOpen} />
-            {isOpen && <InvitationContent />}
+            <div className="wedding__container">
+                <EnvelopeIntro onOpen={openEnvelope} isOpen={isOpen} />
+                {isOpen && <InvitationContent />}
+            </div>
         </div>
     );
 }
