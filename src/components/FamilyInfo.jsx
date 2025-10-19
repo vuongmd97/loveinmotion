@@ -81,7 +81,8 @@ export default function FamilyInfo() {
                 <p className="txt sub">(Tức ngày 24 tháng 10 năm Ất Tỵ)</p>
 
                 <p className="fs-9 text-uppercase mt-5">Địa điểm tổ chức</p>
-                <p className="title">Tại Gia</p>
+                <p className="title mt-1">Tư Gia Nhà Gái</p>
+                <p className="txt sub">{theBridesFamily.address}</p>
             </section>
         </>
     );

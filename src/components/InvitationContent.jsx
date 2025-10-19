@@ -39,7 +39,7 @@ export default function InvitationContent() {
                     </div>
                     <div>
                         <img
-                            className="img img-2"
+                            className="img-2"
                             src="https://vodcftljfczkktzzpgxv.supabase.co/storage/v1/object/public/wedding-assets/image-7.png"
                             alt="img"
                         />

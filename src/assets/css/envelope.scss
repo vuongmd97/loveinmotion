@@ -54,7 +54,7 @@
     content: '';
     transform: rotate(45deg);
     background: var(--envelope-bg);
-    box-shadow: 0 0 30px -5px var(--envelope-shadow);
+    box-shadow: 0 0 20px -6px var(--envelope-shadow);
     width: 100%;
     aspect-ratio: 1;
     display: block;
@@ -64,7 +64,7 @@
 
 .envelope-flap::before {
     bottom: 54px;
-    border-radius: 5rem;
+    border-radius: 60px;
     top: auto;
 }
 
@@ -80,7 +80,7 @@
 
 .envelope-bottom::before {
     top: 55%;
-    border-radius: 5rem;
+    border-radius: 60px;
 }
 
 .heart {
@@ -159,10 +159,21 @@
 .letters {
     width: 320px;
     height: 220px;
-    background: #fff;
     position: absolute;
     left: 50%;
-    transform: translateX(-50%);
     top: 0px;
     z-index: 5;
+    background: #fff;
+    transform: translate(-50%, 0);
+    border: 3px solid #385230;
+    transition: 1s 0.3s ease all;
+}
+
+.cssletter.active {
+    .letters {
+        transform: translate(-50%, -48%);
+    }
+    .envelope-flap {
+        z-index: 3;
+    }
 }

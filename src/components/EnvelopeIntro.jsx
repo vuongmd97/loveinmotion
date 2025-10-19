@@ -1,6 +1,15 @@
+import { useState } from 'react';
 import '../assets/css/envelope.scss';
 
 export default function EnvelopeIntro({ onOpen, isOpen }) {
+    const [letter, setLetter] = useState(false);
+
+    if (isOpen) {
+        setTimeout(() => {
+            setLetter(true);
+        }, 300);
+    }
+
     return (
         <section className="wedding-intro flex-column align-center gap-20">
             <div className="header">
@@ -31,7 +40,7 @@ export default function EnvelopeIntro({ onOpen, isOpen }) {
                 src="https://vodcftljfczkktzzpgxv.supabase.co/storage/v1/object/public/wedding-assets/image-4.png"
                 alt="song-hy"
             />
-            <section className="cssletter">
+            <section className={`cssletter ${letter ? 'active' : ''}`}>
                 <div className={`envelope ${isOpen ? 'active' : 'animation-pulse'}`}>
                     <button className="heart" aria-label="Open Envelope">
                         <span className="heart-text" onClick={onOpen}>
@@ -44,7 +53,9 @@ export default function EnvelopeIntro({ onOpen, isOpen }) {
                         <div className="envelope-right"></div>
                         <div className="envelope-bottom"></div>
                     </div>
-                    <div className="letters"></div>
+                    <div className="letters">
+                        <img class="img" alt="img" src="https://placehold.co/600x600"></img>
+                    </div>
                 </div>
             </section>
         </section>
