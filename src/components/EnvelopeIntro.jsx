@@ -54,7 +54,7 @@ export default function EnvelopeIntro({ onOpen, isOpen }) {
                         <div className="envelope-bottom"></div>
                     </div>
                     <div className="letters">
-                        <img class="img" alt="img" src="https://placehold.co/600x600"></img>
+                        <img className="img" alt="img" src="https://placehold.co/600x600"></img>
                     </div>
                 </div>
             </section>
