@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import Masonry from 'react-masonry-css';
 import ModalImage from 'react-modal-image';
 
@@ -17,6 +18,27 @@ export default function MasonryGallery() {
     const breakpointColumnsObj = {
         default: 3
     };
+
+    useEffect(() => {
+        const handleModalClick = (e) => {
+            const modalContainer = document.querySelector('.__react_modal_image__modal_container');
+
+            if (modalContainer && e.target === modalContainer) {
+                const parentDiv = modalContainer.parentElement;
+                if (parentDiv) {
+                    parentDiv.remove();
+                }
+            }
+        };
+
+        document.addEventListener('click', handleModalClick);
+        document.addEventListener('touchend', handleModalClick);
+
+        return () => {
+            document.removeEventListener('click', handleModalClick);
+            document.removeEventListener('touchend', handleModalClick);
+        };
+    }, []);
 
     return (
         <div className="gallery-wrapper">
