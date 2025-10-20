@@ -1,45 +1,35 @@
-import ImageGallery from 'react-image-gallery';
-import 'react-image-gallery/styles/css/image-gallery.css';
+import Masonry from 'react-masonry-css';
+import ModalImage from 'react-modal-image';
 
 const images = [
-    {
-        original: 'https://placehold.co/800x600?text=Ảnh+1',
-        thumbnail: 'https://placehold.co/100x75?text=1'
-    },
-    {
-        original: 'https://placehold.co/800x600?text=Ảnh+2',
-        thumbnail: 'https://placehold.co/100x75?text=2'
-    },
-    {
-        original: 'https://placehold.co/800x600?text=Ảnh+3',
-        thumbnail: 'https://placehold.co/100x75?text=3'
-    },
-    {
-        original: 'https://placehold.co/800x600?text=Ảnh+4',
-        thumbnail: 'https://placehold.co/100x75?text=4'
-    },
-    {
-        original: 'https://placehold.co/800x600?text=Ảnh+5',
-        thumbnail: 'https://placehold.co/100x75?text=5'
-    }
+    'https://placehold.co/300x400',
+    'https://placehold.co/500x400',
+    'https://placehold.co/300x400',
+    'https://placehold.co/600x400',
+    'https://placehold.co/300x400',
+    'https://placehold.co/300x200',
+    'https://placehold.co/300x400',
+    'https://placehold.co/300x200',
+    'https://placehold.co/300x300'
 ];
 
-export default function WeddingAlbum() {
+export default function MasonryGallery() {
+    const breakpointColumnsObj = {
+        default: 3
+    };
+
     return (
-        <div>
+        <div className="gallery-wrapper">
             <p className="header-label fs-20 fw-bold text-center">Ảnh Cưới</p>
-            <ImageGallery
-                items={images}
-                showPlayButton={true}
-                showFullscreenButton={false}
-                showThumbnails={true}
-                slideInterval={3000}
-                autoPlay={true}
-                // mobile
-                swipingTransitionDuration={300}
-                slideDuration={450}
-                swipeThreshold={30}
-            />
+            <Masonry
+                breakpointCols={breakpointColumnsObj}
+                className="my-masonry-grid mt-2"
+                columnClassName="my-masonry-grid_column"
+            >
+                {images.map((src, i) => (
+                    <ModalImage key={i} small={src} large={src} alt={`img-${i}`} className="gallery-item" />
+                ))}
+            </Masonry>
         </div>
     );
 }

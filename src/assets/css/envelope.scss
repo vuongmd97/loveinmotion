@@ -112,23 +112,9 @@
     background-repeat: no-repeat;
     left: 50%;
     top: 50%;
-    transform: translate(-50%, -50%) scale(0);
+    transform: translate(-50%, -50%) scale(0.8);
     transition: 0.3s ease all;
     z-index: -1;
-}
-
-.heart:hover,
-.heart:active,
-.heart:focus {
-    transform: translate(-50%, -50%);
-    background-color: transparent;
-    color: var(--heart-text);
-}
-
-.heart:hover::before,
-.heart:active::before,
-.heart:focus::before {
-    transform: translate(-50%, -50%) scale(0.8);
 }
 
 .heart-text {
