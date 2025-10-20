@@ -1,0 +1,27 @@
+@use './variables' as *;
+@use './mixins' as *;
+
+.modal {
+    position: fixed;
+    @include size(100%);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    @include centeritems;
+    z-index: 1000;
+    color: $black-default;
+    padding: 24px;
+
+    &__overlay {
+        background-color: rgba(0, 0, 0, 0.8);
+        position: fixed;
+        @include size(100%);
+        top: 0;
+        left: 0;
+        z-index: 1000;
+    }
+
+    &__container {
+        z-index: 1001;
+    }
+}

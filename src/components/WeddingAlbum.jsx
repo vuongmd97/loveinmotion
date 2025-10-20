@@ -1,6 +1,5 @@
-import { useEffect } from 'react';
 import Masonry from 'react-masonry-css';
-import ModalImage from 'react-modal-image';
+import ModalImage from './ModalImage';
 
 const images = [
     'https://placehold.co/300x400',
@@ -19,27 +18,6 @@ export default function MasonryGallery() {
         default: 3
     };
 
-    useEffect(() => {
-        const handleModalClick = (e) => {
-            const modalContainer = document.querySelector('.__react_modal_image__modal_container');
-
-            if (modalContainer && e.target === modalContainer) {
-                const parentDiv = modalContainer.parentElement;
-                if (parentDiv) {
-                    parentDiv.remove();
-                }
-            }
-        };
-
-        document.addEventListener('click', handleModalClick);
-        document.addEventListener('touchend', handleModalClick);
-
-        return () => {
-            document.removeEventListener('click', handleModalClick);
-            document.removeEventListener('touchend', handleModalClick);
-        };
-    }, []);
-
     return (
         <div className="gallery-wrapper">
             <p className="header-label fs-20 fw-bold text-center">Ảnh Cưới</p>
@@ -49,7 +27,7 @@ export default function MasonryGallery() {
                 columnClassName="my-masonry-grid_column"
             >
                 {images.map((src, i) => (
-                    <ModalImage key={i} small={src} large={src} alt={`img-${i}`} className="gallery-item" />
+                    <ModalImage key={i} src={src} classname="gallery-item" />
                 ))}
             </Masonry>
         </div>
