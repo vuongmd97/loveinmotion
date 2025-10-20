@@ -27,7 +27,7 @@ export default function MasonryGallery() {
                 columnClassName="my-masonry-grid_column"
             >
                 {images.map((src, i) => (
-                    <ModalImage key={i} src={src} classname="gallery-item" />
+                    <ModalImage key={i} src={src} className="gallery-item" />
                 ))}
             </Masonry>
         </div>

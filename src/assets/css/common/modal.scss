@@ -23,5 +23,9 @@
 
     &__container {
         z-index: 1001;
+
+        img {
+            border-radius: 0 !important;
+        }
     }
 }

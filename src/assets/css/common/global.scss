@@ -347,7 +347,7 @@
         height: 170px;
 
         &:not(.--center) {
-            transform: translateY(30px);
+            margin-top: 30px;
         }
     }
 }

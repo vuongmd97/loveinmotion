@@ -1,3 +1,5 @@
+import ModalImage from './ModalImage';
+
 export default function FamilyInfo() {
     const groomsFamily = {
         groom: 'Mai Duy Vương',
@@ -40,7 +42,7 @@ export default function FamilyInfo() {
             </div>
 
             <div className="box-img">
-                <img className="img" src="https://placehold.co/600x600" alt="img" />
+                <ModalImage className="img" src="https://placehold.co/600x600" />
             </div>
 
             <div className="text-center">
@@ -50,13 +52,13 @@ export default function FamilyInfo() {
 
             <div className="gallery">
                 <figure className="card">
-                    <img className="img" src="https://placehold.co/600x600" alt="img" />
+                    <ModalImage className="img" src="https://placehold.co/600x600" />
                 </figure>
                 <figure className="card --center">
-                    <img className="img" src="https://placehold.co/600x600" alt="img" />
+                    <ModalImage className="img" src="https://placehold.co/600x600" />
                 </figure>
                 <figure className="card">
-                    <img className="img" src="https://placehold.co/600x600" alt="img" />
+                    <ModalImage className="img" src="https://placehold.co/600x600" />
                 </figure>
             </div>
 
