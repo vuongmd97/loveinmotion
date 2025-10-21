@@ -1,4 +1,5 @@
 import ModalImage from './ModalImage';
+import WeddingVenueMap from './WeddingVenueMap';
 
 export default function FamilyInfo() {
     const groomsFamily = {
@@ -12,7 +13,7 @@ export default function FamilyInfo() {
         bride: 'Trần Ngọc Bảo Trân',
         father: 'Trần Ngọc Thanh',
         mother: 'Lê Cẩm Trang',
-        address: 'address',
+        address: 'Tam Hiệp, Châu Thành, Tiền Giang',
         ceremonyTime: '11h30'
     };
 
@@ -85,6 +86,8 @@ export default function FamilyInfo() {
                 <p className="fs-9 text-uppercase mt-5">Địa điểm tổ chức</p>
                 <p className="title mt-1">Tư Gia Nhà Gái</p>
                 <p className="txt sub">{theBridesFamily.address}</p>
+
+                <WeddingVenueMap />
             </section>
         </>
     );

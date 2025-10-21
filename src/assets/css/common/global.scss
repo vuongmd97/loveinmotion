@@ -110,14 +110,14 @@
 .wedding {
     width: 100vw;
     height: 100dvh;
-    max-width: 430px;
-    margin: 0 auto;
     overflow-y: auto;
-    overflow-x: hidden;
 
     &__container {
         padding: 16px;
         position: relative;
+        max-width: 430px;
+        margin: 0 auto;
+        overflow-x: hidden;
     }
 
     &-intro {
