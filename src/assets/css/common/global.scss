@@ -329,6 +329,21 @@
     letter-spacing: 4px;
 }
 
+.gifts {
+    .header-label {
+        font-family: RnpCYXNnZWudHRm;
+        font-size: 26px;
+        font-style: italic;
+        line-height: 1.6;
+        color: $color-primary;
+    }
+    .txt {
+        font-family: Jura, sans-serif;
+        font-size: 14px;
+        line-height: 1.6;
+    }
+}
+
 .gallery {
     display: flex;
     align-items: flex-start;
@@ -428,8 +443,7 @@
 
 .btn-play {
     @include size(62px);
-    position: absolute;
+    position: fixed;
     bottom: 20px;
-    left: 20px;
     cursor: pointer;
 }

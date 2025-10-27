@@ -1,7 +1,11 @@
 import ModalImage from './ModalImage';
 import WeddingVenueMap from './WeddingVenueMap';
+import { useSearchParams } from 'react-router-dom';
 
 export default function FamilyInfo() {
+    const [searchParams] = useSearchParams();
+    const getName = searchParams.get('to') ?? '';
+
     const groomsFamily = {
         groom: 'Mai Duy Vương',
         father: 'Mai Xuân Hoàng',
@@ -31,7 +35,7 @@ export default function FamilyInfo() {
                     <p className="label">Nhà Gái</p>
                     <p className="name">Ông {theBridesFamily.father}</p>
                     <p className="name">Bà {theBridesFamily.mother}</p>
-                    <p className="address">{groomsFamily.address}</p>
+                    <p className="address">{theBridesFamily.address}</p>
                 </section>
             </div>
             <p className="title-lg text-center">Trân Trọng Báo Tin Lễ Thành Hôn Của</p>
@@ -48,7 +52,7 @@ export default function FamilyInfo() {
 
             <div className="text-center">
                 <h1 className="title-lg fs-15">Trân Trọng Kính Mời</h1>
-                <p className="title-md">Bạn và người thương</p>
+                <p className="title-md">Bạn {getName} và người thương</p>
             </div>
 
             <div className="gallery">

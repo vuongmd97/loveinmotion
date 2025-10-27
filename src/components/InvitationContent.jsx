@@ -1,6 +1,7 @@
 import FamilyInfo from './FamilyInfo';
 import SaveTheDate from './SaveTheDate';
 import WeddingAlbum from './WeddingAlbum';
+import SendGifts from './SendGifts';
 import WeddingCountDown from './WeddingCountDown';
 import image_2 from '../assets/images/image_2.png';
 import image_3 from '../assets/images/image_3.png';
@@ -40,6 +41,7 @@ export default function InvitationContent() {
             <SaveTheDate />
             <WeddingCountDown />
             <WeddingAlbum />
+            <SendGifts />
         </div>
     );
 }
