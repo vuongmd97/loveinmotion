@@ -1,6 +1,10 @@
 @use './variables.scss' as *;
 @use './mixins.scss' as *;
 
+/* =========================
+   UTILITIES
+   ========================= */
+
 .img {
     @include size(100%);
     object-fit: cover;
@@ -18,11 +22,57 @@
     &-3 {
         opacity: 0.3;
     }
-
     &-5 {
         opacity: 0.5;
     }
 }
+
+.w-350 {
+    width: 350px;
+    margin: 0 auto;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.scrolls {
+    height: 100%;
+    overflow-y: auto;
+}
+
+/* Ẩn credit tick */
+.tick [data-credit],
+.tick-credit,
+.tick-credits {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+}
+
+/* =========================
+   ANIMATIONS
+   ========================= */
+
+.animation-pulse {
+    animation: pulse 3.5s ease-in-out 1s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* =========================
+   DAY PICKER
+   ========================= */
 
 .daypicker {
     display: flex;
@@ -60,10 +110,12 @@
 
     .rdp-weeks {
         color: $color-primary;
+
         .rdp-day {
             width: 60px;
             height: 38px;
         }
+
         .rdp-day_button {
             width: 100%;
             height: 100%;
@@ -89,21 +141,59 @@
     }
 }
 
-.animation-pulse {
-    animation: pulse 3.5s ease-in-out 1s infinite;
+/* =========================
+   TYPOGRAPHY / TITLES
+   ========================= */
+
+.title {
+    &-lg {
+        font-family: RnotQmliYWxnbNraSdGY;
+        font-size: 20px;
+        font-weight: bold;
+        line-height: 1.6;
+        color: $color-primary;
+    }
+
+    &-md {
+        font-family: RnotQmliYWxnbNraSdGY;
+        font-size: 18px;
+        font-weight: bold;
+        font-style: italic;
+        line-height: 1.3;
+        color: rgb(195, 147, 7);
+        letter-spacing: 2px;
+    }
 }
 
-@keyframes pulse {
-    0% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.1);
-    }
-    100% {
-        transform: scale(1);
-    }
+.headline {
+    font-family: RnotUGhvdGncmFwaCdGY;
+    font-size: 35px;
+    line-height: 1.3;
+    color: $color-primary;
+    letter-spacing: 2px;
 }
+
+.header-label {
+    font-family: VVRNIEEmUyBIZWFydGJlYXQudHRm;
+    font-size: 50px;
+    line-height: 1.6;
+    letter-spacing: 4px;
+}
+
+/* =========================
+   GENERIC BLOCKS
+   ========================= */
+
+.box-img {
+    border: 8px solid $color-secondary;
+    width: 100%;
+    height: 270px;
+    border-radius: 4px;
+}
+
+/* =========================
+   WEDDING PAGE
+   ========================= */
 
 .wedding {
     width: 100vw;
@@ -167,6 +257,7 @@
             font-size: 22px;
             line-height: 40px;
         }
+
         .tick-flip {
             width: 38px;
         }
@@ -201,27 +292,9 @@
     }
 }
 
-.w-350 {
-    width: 350px;
-    margin: 0 auto;
-}
-
-.cursor-pointer {
-    cursor: pointer;
-}
-
-.tick [data-credit],
-.tick-credit,
-.tick-credits {
-    display: none !important;
-    visibility: hidden !important;
-    opacity: 0 !important;
-}
-
-.scrolls {
-    height: 100%;
-    overflow-y: auto;
-}
+/* =========================
+   SECTIONS
+   ========================= */
 
 .section1 {
     height: 225px;
@@ -247,8 +320,9 @@
         width: 68px;
         height: 190px;
         background-color: $color-secondary;
-        @include centeritems;
+        @include flex-center;
         flex-direction: column;
+        justify-content: space-between;
         padding: 12px 0;
         margin-top: 16px;
 
@@ -262,8 +336,7 @@
         .cyrcle-img {
             border-radius: 50%;
             background: #fff;
-            width: 24px;
-            height: 24px;
+            @include size(24px);
             box-shadow: inset 0px 0px 0px 2px $color-secondary;
         }
     }
@@ -287,47 +360,9 @@
     }
 }
 
-.title {
-    &-lg {
-        font-family: RnotQmliYWxnbNraSdGY;
-        font-size: 20px;
-        font-weight: bold;
-        line-height: 1.6;
-        color: $color-primary;
-    }
-
-    &-md {
-        font-family: RnotQmliYWxnbNraSdGY;
-        font-size: 18px;
-        font-weight: bold;
-        font-style: italic;
-        line-height: 1.3;
-        color: rgb(195, 147, 7);
-        letter-spacing: 2px;
-    }
-}
-
-.headline {
-    font-family: RnotUGhvdGncmFwaCdGY;
-    font-size: 35px;
-    line-height: 1.3;
-    color: $color-primary;
-    letter-spacing: 2px;
-}
-
-.box-img {
-    border: 8px solid $color-secondary;
-    width: 100%;
-    height: 270px;
-    border-radius: 4px;
-}
-
-.header-label {
-    font-family: VVRNIEEmUyBIZWFydGJlYXQudHRm;
-    font-size: 50px;
-    line-height: 1.6;
-    letter-spacing: 4px;
-}
+/* =========================
+   GIFTS
+   ========================= */
 
 .gifts {
     .header-label {
@@ -337,12 +372,17 @@
         line-height: 1.6;
         color: $color-primary;
     }
+
     .txt {
         font-family: Jura, sans-serif;
         font-size: 14px;
         line-height: 1.6;
     }
 }
+
+/* =========================
+   GALLERY
+   ========================= */
 
 .gallery {
     display: flex;
@@ -360,6 +400,41 @@
         }
     }
 }
+
+/* react-image-gallery buttons */
+.image-gallery-left-nav .image-gallery-svg,
+.image-gallery-right-nav .image-gallery-svg {
+    height: 40px;
+    width: 25px;
+}
+
+.image-gallery-fullscreen-button .image-gallery-svg,
+.image-gallery-play-button .image-gallery-svg {
+    height: 20px;
+    width: 20px;
+}
+
+/* Masonry album */
+.my-masonry-grid {
+    display: flex;
+    width: auto;
+    gap: 8px;
+
+    .gallery-item {
+        width: 100%;
+        border-radius: 12px;
+        display: block;
+    }
+
+    &_column {
+        @include flex-column;
+        gap: 8px;
+    }
+}
+
+/* =========================
+   PARTY INFO
+   ========================= */
 
 .party-info {
     font-family: Jura, sans-serif;
@@ -410,36 +485,9 @@
     }
 }
 
-// gallery
-.image-gallery-left-nav .image-gallery-svg,
-.image-gallery-right-nav .image-gallery-svg {
-    height: 40px;
-    width: 25px;
-}
-
-.image-gallery-fullscreen-button .image-gallery-svg,
-.image-gallery-play-button .image-gallery-svg {
-    height: 20px;
-    width: 20px;
-}
-
-// album wedding
-.my-masonry-grid {
-    display: flex;
-    width: auto;
-    gap: 8px;
-
-    .gallery-item {
-        width: 100%;
-        border-radius: 12px;
-        display: block;
-    }
-
-    &_column {
-        @include flex-column;
-        gap: 8px;
-    }
-}
+/* =========================
+   CONTROLS
+   ========================= */
 
 .btn-play {
     @include size(62px);
