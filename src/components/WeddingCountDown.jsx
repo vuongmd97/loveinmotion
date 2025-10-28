@@ -90,6 +90,7 @@ export default function WeddingCountDown() {
                     <span>Giây</span>
                 </div>
             </div>
+            <p className="fs-9 fw-bold playfair color-primary">Until we officially become Mr. & Mrs.</p>
         </section>
     );
 }

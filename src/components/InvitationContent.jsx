@@ -7,6 +7,7 @@ import image_2 from '../assets/images/image_2.png';
 import image_3 from '../assets/images/image_3.png';
 import image_5 from '../assets/images/image_5.png';
 import image_7 from '../assets/images/image_7.png';
+import Thankyou from './Thankyou';
 
 export default function InvitationContent() {
     return (
@@ -42,6 +43,7 @@ export default function InvitationContent() {
             <WeddingCountDown />
             <WeddingAlbum />
             <SendGifts />
+            <Thankyou />
         </div>
     );
 }
