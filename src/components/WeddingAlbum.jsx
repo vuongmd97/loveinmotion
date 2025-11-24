@@ -1,3 +1,4 @@
+import { memo } from 'react';
 import Masonry from 'react-masonry-css';
 import ModalImage from './ModalImage';
 
@@ -10,7 +11,7 @@ const images = [
     'album/VuongTran_7758.JPG'
 ];
 
-export default function MasonryGallery() {
+function MasonryGallery() {
     const breakpointColumnsObj = {
         default: 3
     };
@@ -30,3 +31,5 @@ export default function MasonryGallery() {
         </div>
     );
 }
+
+export default memo(MasonryGallery);
