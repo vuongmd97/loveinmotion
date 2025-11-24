@@ -153,6 +153,10 @@
     transform: translate(-50%, 0);
     border: 3px solid #385230;
     transition: 1s 0.3s ease all;
+
+    .img {
+        object-position: center 5%;
+    }
 }
 
 .cssletter.active {

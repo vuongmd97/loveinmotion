@@ -1,4 +1,5 @@
 import qrbank from '../assets/images/qrbank.jpg';
+import wedd from '../assets/album/VuongTran_7433.JPG';
 
 export default function SendGifts() {
     return (
@@ -9,7 +10,7 @@ export default function SendGifts() {
                 hiện diện và lời chúc phúc của bạn sẽ là niềm vui lớn trong ngày trọng đại này.
             </p>
             <div className="avatar">
-                <img className="img" src="https://placehold.co/400x400" alt="img" />
+                <img className="img" src={wedd} alt="img" />
             </div>
             <div className="qr-code flexcenter gap-8">
                 <div className="qr">

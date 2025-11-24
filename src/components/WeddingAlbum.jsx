@@ -1,17 +1,13 @@
 import Masonry from 'react-masonry-css';
 import ModalImage from './ModalImage';
+import wedd1 from '../assets/album/VuongTran_8014.JPG';
+import wedd3 from '../assets/album/VuongTran_8046.JPG';
+import wedd4 from '../assets/album/VuongTran_8074.JPG';
+import wedd5 from '../assets/album/VuongTran_7700.JPG';
+import wedd6 from '../assets/album/VuongTran_7715.JPG';
+import wedd8 from '../assets/album/VuongTran_7758.JPG';
 
-const images = [
-    'https://placehold.co/300x400',
-    'https://placehold.co/500x400',
-    'https://placehold.co/300x400',
-    'https://placehold.co/600x400',
-    'https://placehold.co/300x400',
-    'https://placehold.co/300x200',
-    'https://placehold.co/300x400',
-    'https://placehold.co/300x200',
-    'https://placehold.co/300x300'
-];
+const images = [wedd1, wedd3, wedd4, wedd5, wedd6, wedd8];
 
 export default function MasonryGallery() {
     const breakpointColumnsObj = {

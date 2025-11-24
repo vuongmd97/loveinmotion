@@ -1,6 +1,10 @@
 import ModalImage from './ModalImage';
 import WeddingVenueMap from './WeddingVenueMap';
 import { useSearchParams } from 'react-router-dom';
+import wedd1 from '../assets/album/VT2535_06.jpg';
+import wedd2 from '../assets/album/bia.JPG';
+import wedd3 from '../assets/album/VuongTran_7531.JPG';
+import wedd4 from '../assets/album/VuongTran_7592.JPG';
 
 export default function FamilyInfo() {
     const [searchParams] = useSearchParams();
@@ -11,15 +15,15 @@ export default function FamilyInfo() {
         groom: 'Mai Duy Vương',
         father: 'Mai Xuân Hoàng',
         mother: 'Trần Thị Hằng',
-        address: 'Ấp 9, Xã An Long, TP Hồ Chí Minh'
+        address: 'Số 242, Ấp 9, Xã An Long, TP Hồ Chí Minh'
     };
 
     const theBridesFamily = {
         bride: 'Trần Ngọc Bảo Trân',
         father: 'Trần Ngọc Thanh',
         mother: 'Lê Cẩm Trang',
-        address: 'Tam Hiệp, Châu Thành, Tiền Giang',
-        ceremonyTime: '11h30'
+        address: 'Ấp Khu Phố, xã Long Hưng, tỉnh Đồng Tháp',
+        ceremonyTime: '11h'
     };
 
     return (
@@ -48,7 +52,7 @@ export default function FamilyInfo() {
             </div>
 
             <div className="box-img">
-                <ModalImage className="img" src="https://placehold.co/600x600" />
+                <ModalImage className="img" src={wedd1} />
             </div>
 
             <div className="text-center">
@@ -60,13 +64,13 @@ export default function FamilyInfo() {
 
             <div className="gallery">
                 <figure className="card">
-                    <ModalImage className="img" src="https://placehold.co/600x600" />
+                    <ModalImage className="img" src={wedd3} />
                 </figure>
                 <figure className="card --center">
-                    <ModalImage className="img" src="https://placehold.co/600x600" />
+                    <ModalImage className="img" src={wedd2} />
                 </figure>
                 <figure className="card">
-                    <ModalImage className="img" src="https://placehold.co/600x600" />
+                    <ModalImage className="img" src={wedd4} />
                 </figure>
             </div>
 

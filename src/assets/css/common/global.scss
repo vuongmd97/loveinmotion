@@ -396,6 +396,7 @@
         .img {
             border: 2px solid rgb(37, 38, 40);
             border-radius: 50%;
+            object-position: center 30%;
         }
     }
 }
@@ -524,7 +525,7 @@
     position: relative;
 
     .background {
-        background-image: url(https://placehold.co/400x400);
+        background-image: url('../../album/VuongTran_8014.JPG');
         background-size: auto 100%;
         background-origin: content-box;
         background-position: 50% 0%;
@@ -561,5 +562,23 @@
     .container {
         height: 100%;
         position: relative;
+    }
+}
+
+.loading {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    z-index: 999;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    > div {
+        max-width: 80%;
     }
 }

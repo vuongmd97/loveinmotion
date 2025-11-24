@@ -3,6 +3,7 @@ import '../assets/css/envelope.scss';
 import image_1 from '../assets/images/image_1.png';
 import image_4 from '../assets/images/image_4.png';
 import image_5 from '../assets/images/image_5.png';
+import weddingCover from '../assets/album/AC2.JPG';
 
 export default function EnvelopeIntro({ onOpen, isOpen }) {
     const [letter, setLetter] = useState(false);
@@ -41,7 +42,7 @@ export default function EnvelopeIntro({ onOpen, isOpen }) {
                         <div className="envelope-bottom"></div>
                     </div>
                     <div className="letters">
-                        <img className="img" alt="img" src="https://placehold.co/600x600"></img>
+                        <img className="img" alt="img" src={weddingCover}></img>
                     </div>
                 </div>
             </section>
