@@ -48,7 +48,7 @@ export default function FamilyInfo() {
             </div>
 
             <div className="box-img">
-                <ModalImage className="img" loading="lazy" src="album/VT2535_06.jpg" />
+                <ModalImage className="img" src="album/VT2535_06.jpg" />
             </div>
 
             <div className="text-center">
@@ -60,13 +60,13 @@ export default function FamilyInfo() {
 
             <div className="gallery">
                 <figure className="card">
-                    <ModalImage className="img" loading="lazy" src="album/VuongTran_7531.JPG" />
+                    <ModalImage className="img" src="album/VuongTran_7531.JPG" />
                 </figure>
                 <figure className="card --center">
-                    <ModalImage className="img" loading="lazy" src="album/bia.JPG" />
+                    <ModalImage className="img" src="album/bia.JPG" />
                 </figure>
                 <figure className="card">
-                    <ModalImage className="img" loading="lazy" src="album/VuongTran_7592.JPG" />
+                    <ModalImage className="img" src="album/VuongTran_7592.JPG" />
                 </figure>
             </div>
 

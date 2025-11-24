@@ -11,7 +11,7 @@ export default function ModalImage({ src, className = '' }) {
                 <div className="modal">
                     <span className="modal__overlay" onClick={() => setIsOpen(false)}></span>
                     <div className="modal__container">
-                        <img src={src} alt="img" loading="lazy" className={className} />
+                        <img src={src} alt="img" className={className} />
                     </div>
                 </div>
             )}
