@@ -1,6 +1,3 @@
-import qrbank from '../assets/images/qrbank.jpg';
-import wedd from '../assets/album/VuongTran_7433.JPG';
-
 export default function SendGifts() {
     return (
         <section className="gifts flex-column align-center">
@@ -10,11 +7,11 @@ export default function SendGifts() {
                 hiện diện và lời chúc phúc của bạn sẽ là niềm vui lớn trong ngày trọng đại này.
             </p>
             <div className="avatar">
-                <img className="img" src={wedd} alt="img" />
+                <img className="img" src="album/VuongTran_7433.JPG" alt="img" />
             </div>
             <div className="qr-code flexcenter gap-8">
                 <div className="qr">
-                    <img src={qrbank} alt="img" className="img" />
+                    <img src="images/qrbank.jpg" alt="img" className="img" />
                 </div>
                 <div className="info flex-column gap-2 align-center flex-1">
                     <p className="txt">CTK: Bảo Trân</p>

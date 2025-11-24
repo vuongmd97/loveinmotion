@@ -1,7 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import Tick from '@pqina/flip';
 import '@pqina/flip/dist/flip.min.css';
-import image_6 from '../assets/images/image_6.png';
 
 function pad2(n) {
     return String(n).padStart(2, '0');
@@ -70,7 +69,7 @@ export default function WeddingCountDown() {
 
     return (
         <section className="text-right wedding-countdown">
-            <img className="countdown" src={image_6} alt="countdown" />
+            <img className="countdown" src="images/image_6.png" alt="countdown" />
 
             <div className="d-flex justify-right gap-4 wrap-countdown">
                 <div className="flex-column align-center gap-4">

@@ -1,10 +1,6 @@
 import ModalImage from './ModalImage';
 import WeddingVenueMap from './WeddingVenueMap';
 import { useSearchParams } from 'react-router-dom';
-import wedd1 from '../assets/album/VT2535_06.jpg';
-import wedd2 from '../assets/album/bia.JPG';
-import wedd3 from '../assets/album/VuongTran_7531.JPG';
-import wedd4 from '../assets/album/VuongTran_7592.JPG';
 
 export default function FamilyInfo() {
     const [searchParams] = useSearchParams();
@@ -52,7 +48,7 @@ export default function FamilyInfo() {
             </div>
 
             <div className="box-img">
-                <ModalImage className="img" src={wedd1} />
+                <ModalImage className="img" loading="lazy" src="album/VT2535_06.jpg" />
             </div>
 
             <div className="text-center">
@@ -64,13 +60,13 @@ export default function FamilyInfo() {
 
             <div className="gallery">
                 <figure className="card">
-                    <ModalImage className="img" src={wedd3} />
+                    <ModalImage className="img" loading="lazy" src="album/VuongTran_7531.JPG" />
                 </figure>
                 <figure className="card --center">
-                    <ModalImage className="img" src={wedd2} />
+                    <ModalImage className="img" loading="lazy" src="album/bia.JPG" />
                 </figure>
                 <figure className="card">
-                    <ModalImage className="img" src={wedd4} />
+                    <ModalImage className="img" loading="lazy" src="album/VuongTran_7592.JPG" />
                 </figure>
             </div>
 
